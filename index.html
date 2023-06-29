@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Basics 101 - Home</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <style>
+
+            #loading-circle {
+                background-color: red;
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                opacity: 1;
+
+                animation-duration: 1.5s;
+                animation-name: loading-animation;
+                animation-iteration-count: 1;
+                position: relative;
+                animation-fill-mode: both;
+                animation-timing-function: linear;
+            }
+
+            @keyframes loading-animation {
+                0% {
+                    top: -300px;
+                    left: 300px;
+                    opacity: 1;
+                    background-color: red;
+                }
+                12.5% {
+                    top: -200px;
+                    left: 300px;
+                    opacity: 1;
+                    background-color: orange;
+                }
+                25% {
+                    top: -100px;
+                    left: 400px;
+                    opacity: 1;
+                    background-color: yellow;
+                }
+                37.5% {
+                    top: -100px;
+                    left: 500px;
+                    opacity: 1;
+                    background-color: green;
+                }
+                50% {
+                    top: -200px;
+                    left: 600px;
+                    background-color: teal;
+                    opacity: 1;
+                }
+                62.5% {
+                    top: -300px;
+                    left: 600px;
+                    background-color: blue;
+                    opacity: 1;
+                }
+                75% {
+                    top: -400px;
+                    left: 500px;
+                    background-color: purple;
+                    opacity: 1;
+                }
+                87.5% {
+                    top: -400px;
+                    left: 400px;
+                    background-color: violet;
+                    opacity: 1;
+                }
+                100% {
+                    top: -300px;
+                    left: 300px;
+                    background-color: red;
+                    opacity: 0;
+                }
+            }
+
+            body {
+                background-color: beige;
+            }
+            #whole-page {
+                animation-duration: 1s;
+                animation-delay: 1.5s;
+                animation-name: body-load;
+                animation-fill-mode: both;
+                opacity: 0;
+            }
+
+            @keyframes body-load {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            #Logo {
+                width: 77px;
+                height: 77px;
+                padding: 10px;
+                transition-property: transform;
+                transition-duration: 0.5s;
+                transform: rotate(0);
+            }
+            #Logo:hover {
+                transform: rotate(360deg);
+            }
+            #home_Top {
+                display: flex;
+                font-size: 20px;
+                background-color: rgb(152, 238, 204);
+                padding: 20px;
+            }
+            #site_Title {
+                margin: auto;
+                text-decoration: bold;
+            }
+            #definition {
+                border: 3px solid black;
+                padding: 10px;
+                margin: 3px;
+                font-size: 20px;
+                font-family:'Courier New', Courier, monospace;
+            }
+            #Body {
+                font-family: 'Times New Roman', Times, serif;
+                margin: 20px;
+            }
+            #red-text {
+                color: red;
+            }
+            #brown-text {
+                color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="file:///C:/Users/ronak/Downloads/WebDevCamp/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="file:///C:/Users/ronak/Downloads/WebDevCamp/parts.html">Parts of a Robot</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="file:///C:/Users/ronak/Downloads/WebDevCamp/applications.html">Applications of Robotics in the Real World</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <div id="whole-page">
+            <div id="home_Top">
+                <img id="Logo" src="file:///C:/Users/ronak/Downloads/images-removebg-preview.jpg">
+                <h1 id="site_Title">Robotics Basics 101</h1>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  Quote
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>Get Good at Robotics</p>
+                    <footer class="blockquote-footer">Random Guy from <cite title="Source Title">Robotics Class</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+            <div id="Body">
+                <h2><strong>What is Robotics?</strong></h2>
+                <p id="definition"><Strong>Robotics is the science and creation of building an object capable of executing code or reacting naturally to it's environment.</Strong></p>
+                <h2>Agenda</h2>
+                <p>There are many basic concepts to robotics, but in this website, we will be going over the <span id="red-text"><strong>Parts of a Robot and Applications that a Robot has in the real world.</strong></span> Here is a brief understanding of the first one in a sentence. There are 3 fundamental pieces of hardware. These are Sensors, Effectors, and Control Systems. Sensors are what allow a robot to gather information about its surroundings. Effectors are the parts of a robot that actually do the work. Effectors can be any sort of tool that you can mount on your robot and control with the Robot’s computer. Lastly, we have Control systems. Control systems are the “brains” of a robot and the part of the Robot that determines the Robot’s behavior. You can find more information in the <en>Parts of a Robot</en> page.</p>
+                <h2>Why Robotics?</h2>
+                <p>Robotics is rapidly evolving platform that keeps getting better ever year. In fact, robot capabilities roughly <span id="brown-text"><strong>double ever few years</strong></span>. We're talking exponential growth. If one would like to have a successful career in the tech industry now-a-days, it's very important that they have basic knowledge oif robotics. this is because eventually, their job will probably be replaced by robots. Robotics is also a fun and interesting way to combine hardware (metal, motors, servos) and software (text editors, coding) to solve problems in the real world.</p>
+            </div>
+        </div>
+        <div id="loading-circle">
+
+        </div>
+    </body>
+</html>

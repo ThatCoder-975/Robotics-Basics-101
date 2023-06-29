@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <title>Basics 101 - Parts of a Robot</title>
+        <style>
+
+            #loading-circle {
+                background-color: red;
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                opacity: 1;
+
+                animation-duration: 1.5s;
+                animation-name: loading-animation;
+                animation-iteration-count: 1;
+                position: relative;
+                animation-fill-mode: both;
+                animation-timing-function: linear;
+            }
+
+            @keyframes loading-animation {
+                0% {
+                    top: -300px;
+                    left: 300px;
+                    opacity: 1;
+                    background-color: red;
+                }
+                12.5% {
+                    top: -200px;
+                    left: 300px;
+                    opacity: 1;
+                    background-color: orange;
+                }
+                25% {
+                    top: -100px;
+                    left: 400px;
+                    opacity: 1;
+                    background-color: yellow;
+                }
+                37.5% {
+                    top: -100px;
+                    left: 500px;
+                    opacity: 1;
+                    background-color: green;
+                }
+                50% {
+                    top: -200px;
+                    left: 600px;
+                    background-color: teal;
+                    opacity: 1;
+                }
+                62.5% {
+                    top: -300px;
+                    left: 600px;
+                    background-color: blue;
+                    opacity: 1;
+                }
+                75% {
+                    top: -400px;
+                    left: 500px;
+                    background-color: purple;
+                    opacity: 1;
+                }
+                87.5% {
+                    top: -400px;
+                    left: 400px;
+                    background-color: violet;
+                    opacity: 1;
+                }
+                100% {
+                    top: -300px;
+                    left: 300px;
+                    background-color: red;
+                    opacity: 0;
+                }
+            }
+
+            body {
+                background-color: beige;
+            }
+            #whole-page {
+                animation-duration: 1s;
+                animation-delay: 1.5s;
+                animation-name: body-load;
+                animation-fill-mode: both;
+                opacity: 0;
+            }
+
+            @keyframes body-load {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            #Logo {
+                width: 77px;
+                height: 77px;
+                padding: 10px;
+                transition-property: transform;
+                transition-duration: 0.5s;
+                transform: rotate(0);
+            }
+            #Logo:hover {
+                transform: rotate(360deg);
+            }
+            #home_Top {
+                display: flex;
+                font-size: 20px;
+                background-color: rgb(152, 238, 204);
+                padding: 20px;
+            }
+            #site_Title {
+                margin: auto;
+                text-decoration: bold;
+            }
+            #definition {
+                border: 3px solid black;
+                padding: 10px;
+                margin: 3px;
+                font-size: 20px;
+                font-family:'Courier New', Courier, monospace;
+            }
+            #Body {
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="file:///C:/Users/ronak/Downloads/WebDevCamp/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="file:///C:/Users/ronak/Downloads/WebDevCamp/parts.html">Parts of a Robot</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="file:///C:/Users/ronak/Downloads/WebDevCamp/applications.html">Applications of Robotics in the Real World</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <div id="whole-page">
+            <div id="home_Top">
+                <img id="Logo" src="file:///C:/Users/ronak/Downloads/images-removebg-preview.jpg">
+                <h1 id="site_Title">Robotics Basics 101</h1>
+            </div>
+            <div id="Body">
+                <h2>The Parts of a Robot</h2>
+                <p>There are <strong>3</strong> main parts to a robot. These are...</p>
+                <ol>
+                    <li>Sensors.</li>
+                    <li>Effectors.</li>
+                    <li>Control Systems.</li>
+                </ol>
+                <h3>Sensors</h3>
+                <p>Sensors are what allow a robot to gather information about its surroundings. Sensors are one of the most needed and usful parts of a robot because they are what allows a robot to function properly. The information that was gathered can be used to guide the robot's behavior. Some examples of sensors can be cameras, microphones, and accelerometers, which measure acceleration, light sensors, sound sensors, temperature sensors, contact sensors, proximity sensors, distance sensors, pressure sensors, tilt sensors, navigatiuon or GPS sensors, gyroscopes, voltage sensors, and electrical current sensors.</p>
+                <h3>Effectors</h3>
+                <p>Effectors are the parts of a robot that actually do the work. Effectors can be any sort of tool that you can mount on your robot and control with the Robot's computer, or control system. Effectors are important because effectors are the window to being able to interact with its environment. Grippers (Mechanical grippers, vacuum grippers, magnetic grippers, and servo grippers), Process Tools (Welding Guns, Paint Spray Guns, Cutting tools, Deburring tools or tools that remove rough edges, and dispensers), and speakers are all effectors.</p>
+                <h3>Control Systems</h3>
+                <p>Lastly, we have Control systems. Control systems are the “brains” of a robot and the part of the Robot that determines the Robot's behavior. Without Control Systems, a robot would not be able to function as it would be the same as a human intact but with no brain. Simply no function. Therefore, some may argue that the control systems of a robot are the most important thing in a robot.</p>
+            </div>
+        </div>
+        <div id="loading-circle">
+
+        </div>
+    </body>
+</html>
